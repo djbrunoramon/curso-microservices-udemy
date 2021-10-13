@@ -44,3 +44,7 @@ spring:
     serialization:
       fail-on-empty-beans: false
     default-property-inclusion: non_null
+springdoc:
+  api-docs:
+    path: book-service/v3/api-docs
+  show-actuator: true
