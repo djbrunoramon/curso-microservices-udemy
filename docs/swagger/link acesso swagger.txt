@@ -1,0 +1,10 @@
+
+Link para acessar o Swagger pelo API Gateway
+http://localhost:8765/swagger-ui.html
+
+Link para acessar o Swagger do Cambio Service diretamente
+http://localhost:8000/swagger-ui.html
+
+Link para acessar o Swagger do Book Service diretamente
+http://localhost:8100/swagger-ui.html
+
