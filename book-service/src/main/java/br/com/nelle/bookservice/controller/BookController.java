@@ -35,11 +35,13 @@ public class BookController {
         var book = repository.getById(id);
         if (book == null) throw new RuntimeException("Book not found!");
 
-        var cambo = proxy.getCambio(book.getPrice(), "USD", currency);
+        var cambio = proxy.getCambio(book.getPrice(), "USD", currency);
 
         var port = environment.getProperty("local.server.port");
-        book.setEnvironment(port + " FEIGN");
-        book.setPrice(cambo.getConvertedValue());
+        book.setEnvironment(
+                "Book port " + port +
+                " Cambio port " + cambio.getEnvironment());
+        book.setPrice(cambio.getConvertedValue());
         return book;
     }
 /*
